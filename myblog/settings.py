@@ -41,8 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-#     'cloudinary',
-#     'cloudinary_storage',
     'django.contrib.staticfiles',   
     'app',
     'ckeditor',
@@ -59,13 +57,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# CLOUDINARY_STORAGE = {
-#     'CLOUD_NAME': 'ddqauyqwx',
-#     'API_KEY': '434228458969481',
-#     'API_SECRET': 'kljOnuJcE-CGCMa6e_o06dPv40U',
-# }
 
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
 ROOT_URLCONF = 'myblog.urls'
 
 TEMPLATES = [
