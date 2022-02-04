@@ -9,8 +9,8 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
-import cloudinary
-import cloudinary_storage
+# import cloudinary
+# import cloudinary_storage
 
 import os
 from django.contrib.messages import constants as messages
@@ -25,8 +25,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'r*50(g&w^dl0fk56m2b%eo#tiv2-=6cu)2fc(s1&v#c_haim=^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-# DEBUG = False
+# DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['sty-blog.herokuapp.com']
 
 
@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'cloudinary',
-    'cloudinary_storage',
+#     'cloudinary',
+#     'cloudinary_storage',
     'django.contrib.staticfiles',   
     'app',
     'ckeditor',
@@ -58,11 +58,13 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'ddqauyqwx',
-    'API_KEY': '434228458969481',
-    'API_SECRET': 'kljOnuJcE-CGCMa6e_o06dPv40U',
-}
+
+# CLOUDINARY_STORAGE = {
+#     'CLOUD_NAME': 'ddqauyqwx',
+#     'API_KEY': '434228458969481',
+#     'API_SECRET': 'kljOnuJcE-CGCMa6e_o06dPv40U',
+# }
+
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 ROOT_URLCONF = 'myblog.urls'
 
