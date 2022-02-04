@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
+import cloudinary
+import cloudinary_storage
 
 import os
 from django.contrib.messages import constants as messages
@@ -39,8 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary',
     'cloudinary_storage',
-    'django.contrib.staticfiles',    
+    'django.contrib.staticfiles',   
     'app',
     'ckeditor',
 ]
